@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<title>Latitude vs. Max Temperature</title>
+</head>
+
+<ul>
+    <li><a href="web_code.html">Home</a></li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Charts</a>
+        <div class="dropdown-content">
+            <a href="temp.html">Latitude vs. Max Temperature</a>
+            <a href="humidity.html">Latitude vs. Humidity</a>
+            <a href="cloud.html">Latitude vs. Cloudiness</a>
+            <a href="wind.html">Latitude vs. Wind Speed</a></div></li>  
+    <li><a href="data.html">Data</a></li>
+    <li><a href="comparison.html">Comparisons</a></li>
+</ul>
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+</script>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-7">
+                <h1>Latitude vs. Max Temperature</h1>
+                    <div class="container-fluid">
+                        <div class = "row">
+                            <div class="col-lg-12">
+                                <img border=0 alt="City Latitude vs Temperature" class="img-responsive center-block"
+                                        src="Resources/assets/images/Fig1.png" width=800 height =800>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        When you examine the relationship between Latitude and Max Temperature, a pattern can be observed where it seems that the
+                        closer to a Latitude of zero that you move, the warmer your city will be. In general, it also seems that temperature and 
+                        North you move, whereas the correlation seems weaker as you move South. 
+                    </p>
+                </div>
+            </div>
+        </div>
+</body>
+ 
+
