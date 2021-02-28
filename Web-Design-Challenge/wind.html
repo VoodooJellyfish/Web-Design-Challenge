@@ -1,57 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 
-<title>Latitude vs. Wind Speed</title>
+    <title>Latitude vs. Wind Speed</title>
 </head>
 
-<ul>
-    <li><a href="web_code.html">Home</a></li>
-    <li class="dropdown">
-        <a href="javascript:void(0)" class="dropbtn">Charts</a>
-        <div class="dropdown-content">
-            <a href="temp.html">Latitude vs. Max Temperature</a>
-            <a href="humidity.html">Latitude vs. Humidity</a>
-            <a href="cloud.html">Latitude vs. Cloudiness</a>
-            <a href="wind.html">Latitude vs. Wind Speed</a></div></li>  
-    <li><a href="data.html">Data</a></li>
-    <li><a href="comp.html">Comparisons</a></li>
-</ul>
-<script>
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    }
-</script>
-<body>
+<nav class="navbar navbar-default">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-7">
-                <h1>Latitude vs. Wind Speed</h1>
-                    <div class="container-fluid">
-                        <div class = "row">
-                            <div class="col-lg-12">
-                                <img border=0 alt="Latitude vs Wind Speed" class="img-responsive center-block"
-                                        src="Resources/assets/images/Fig2.png" width=800 height =800>
-                            </div>
-                        </div>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand btn-primary" href="web_code.html">Latitude and Weather</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Plots<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="temp.html">Latitude vs. Max Temperature</a></li>
+                    <li><a href="humidity.html">Latitude vs. Humidity</a></li>
+                    <li><a href="cloud.html">Latitude vs. Cloudiness</a></li>
+                    <li><a href="wind.html">Latitude vs. Wind Speed</a></li>
+                </ul>
+            </a>
+          </li>
+          <li><a href="comp.html">Comparison</a></li>
+          <li><a href="data.html">Data</a></li>
+        </ul>
+      </div>
+    </div>
+</nav>
+
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-7">
+            <h1>
+                Latitude vs. Wind Speed
+            </h1>
+            <hr>
+            <div class="container-fluid">
+                <div class = "row">
+                    <div class="col-lg-12">
+                        <img border=0 alt="City Latitude vs Wind Speed" class="img-responsive center-block"
+                                src="resources/assets/images/Fig4.png" width=800 height =800>
                     </div>
-                    <p>
-                        The data seems to show that wind speed seems to increase the further away from zero in latitude you travel.
-                        This is especially true the further North you move, but is also true to a weaker extent the further south you move. 
-                        If you are looking for a calm-winded city, it would make the most sense to make sure you move somewhere close to the equator
-                    </p>
+                </div>
+            </div>
+            <p>
+                There seems to be a weak correlation between wind speeds increasing the further South in Lattitude a city is located.
+                However, there are cities at a wide range of Lattitudes with low average wind speeds, and it is apparent a lot of external 
+                variables effect wind speed outside of just Lattitude.
+            </p>
+        </div>
+        <div class="col-lg-5">
+            <h1>
+                Plots
+            </h1>
+            <hr>
+            <div class="container-fluid">
+                <div class = "row">
+                    <div class="col-sm-6">
+                        <a href="temp.html">
+                            <img border=0 alt="City Latitude vs Temperature" class="img-responsive"
+                                src="resources/assets/images/Fig1.png" width=400 height =400>
+                        </a>
+                    </div>
+                    <div class="col-sm-6">
+                        <a href="humidity.html">
+                            <img border=0 alt="City Latitude vs Humidity" class="img-responsive"
+                                src="resources/assets/images/Fig2.png" width=400 height =400>
+                        </a>
+                    </div>
+                </div>
+                <div class = "row">
+                    <div class="col-sm-6">
+                        <a href="cloud.html">
+                            <img border=0 alt="City Latitude vs Cloudiness" class="img-responsive"
+                                src="resources/assets/images/Fig3.png" width=400 height =400>
+                        </a>
+                    </div>
+                    <div class="col-sm-6">
+                        <a href="wind.html">
+                            <img border=0 alt="City Latitude vs Wind Speed" class="img-responsive" 
+                                src="resources/assets/images/Fig4.png" width=400 height =400>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
 </body>
+</html>
